@@ -30,14 +30,17 @@ nav {
 }
 /* set container style for question and multiple choice buttons */
 /* (font and size of question, size and text of buttons) */
-section{
-    margin: 0, 32px;
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: left;
+    max-width:60%;
 }
 
 h2 {
@@ -45,7 +48,10 @@ h2 {
     font-weight: bold;
     color: black;
     text-align: center;
-    max-width:60%;
+}
+
+p {
+    font-size: 18px;
 }
 
 ul {
@@ -70,10 +76,12 @@ button {
 /* not visible until answered, keep visible for 5 seconds after answer */
 
 article {
-    margin: 0, 25%;
+    width: 60%;
     text-align: center;
     border-top: solid;
     border-color: var(--purp);
     border-width: 4px;
     margin-top: 6px;
+    font-size: 32px;
+    color: var(--purp);
 }
