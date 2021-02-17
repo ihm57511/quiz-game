@@ -45,6 +45,7 @@ h2 {
     font-weight: bold;
     color: black;
     text-align: center;
+    max-width:60%;
 }
 
 ul {
@@ -62,6 +63,7 @@ button {
     border-radius: 4px;
     background: var(--purp);
     color: whitesmoke;
+    font-size: 18px;
 }
 
 /* set visibility and style of alert section */
