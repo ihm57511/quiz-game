@@ -14,7 +14,7 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 12px;
+    padding: 24px;
 }
 
 #hs {
@@ -36,6 +36,29 @@ main {
     align-items: center;
 }
 
+#start-card {
+    display: visible;
+} 
+
+#card1 {
+    display: none;
+}
+
+#card2 {
+    display: none;
+}
+
+#card3 {
+    display: none;
+}
+
+#card4 {
+    display: none;
+}
+
+#card5 {
+    display: none;
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -81,7 +104,7 @@ article {
     border-top: solid;
     border-color: var(--purp);
     border-width: 4px;
-    margin-top: 6px;
     font-size: 32px;
     color: var(--purp);
+    display: none;
 }
