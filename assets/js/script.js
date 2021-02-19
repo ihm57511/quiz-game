@@ -42,22 +42,44 @@ var questions = [
 
         
 ]
+var timer = document.getElementById('timer');
+var secondsLeft = 60;
+var quiz = document.getElementById("quiz");
+// "Coding Quiz Challenge"
+// "Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answeres will penalize your scoretime by ten seconds!"
+function start() {
+    var h1 = document.getElementById('h1');
+    h1.textContent = "Coding Quiz Challenge";
+    document.body.appendChild(h1);
+    var p = document.getElementById('p');
+    p.textContent = "Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answeres will penalize your scoretime by ten seconds!";
+    document.body.appendChild(p);
+} 
 
-    
-    
 
-function quiz() {
+function game() {
+    document.getElementById('startBtn').remove(this);
+    setTime();
     function setTime() {
-        // start time and set interval
-        function display() {
-            for (i=0, i < questions.length, i++)
-            
-            if ("clicked" === true) {
-            
-            }
-        }
+        var timerInterval = setInterval(function() {
+          secondsLeft--;
+          timer.textContent = "Timer " + secondsLeft;
+      
+          if(secondsLeft === 0) {
+            clearInterval(timerInterval);
+            h1.textContent = "Game Over!";
+            document.body.appendChild(h1);
+          }
+      
+        }, 1000);
     }
+        
 }
+document.getElementById('startBtn').addEventListener("click", game);
+function inti() {
+    start();
+}
+inti();
 // need function for cards
 // start-card visible at load,
 // at start button press, display change to none,
